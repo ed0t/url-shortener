@@ -1,0 +1,13 @@
+redis:
+  image: redis:latest
+  ports:
+    - "6379:6379"
+urlshortener:
+  image: com.fridgewizard/urlshorener:latest
+  ports:
+    - "8081:8081"
+  environment:
+    - REDIS_ENDPOINT=redis
+    - HTTP_ENDPOINT=localhost
+  links:
+    - redis

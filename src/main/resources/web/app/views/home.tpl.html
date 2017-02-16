@@ -1,0 +1,42 @@
+<div class="container vertical-align">
+    <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 alerts">
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)" dismiss-on-timeout="2000">{{alert.msg}}</alert>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-3 col-md-offset-4 col-lg-offset-4"
+             ng-hide="shortenedUrl">
+            <form name="urlForm" ng-submit="submitForm()">
+                <div class="input-group input-form">
+                    <input type="text" class="form-control" placeholder="Enter a URL to shorten" ng-model="url">
+                 <span class="input-group-btn">
+                    <button class="btn btn-default btn-success" type="submit">Shorten</button>
+                </span>
+                </div>
+            </form>
+
+
+        </div>
+
+
+        <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-3 col-md-offset-4 col-lg-offset-4"
+             ng-show="shortenedUrl">
+            <form name="shortenedUrlForm">
+                <div class="input-group input-form">
+                    <input id="shortUrl" type="text" ng-readonly="true" class="form-control" ng-model="shortenedUrl">
+                    <span id="clear-url" class="glyphicon glyphicon glyphicon-remove" ng-click="clearUrl()"></span>
+                 <span class="input-group-btn">
+                    <button class="btn btn-default btn-success" ngclipboard data-clipboard-target="#shortUrl">Copy
+                    </button>
+                </span>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+</div>
+
+

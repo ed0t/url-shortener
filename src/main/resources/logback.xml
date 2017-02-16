@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <contextName>urlshortener</contextName>
+
+    <variable name="LAYOUT_PATTERN_BODY" value="%m%n"/>
+    <variable name="LAYOUT_PATTERN_PREFIX" value='%d{ISO8601} level=%-5p className="%c{50}"'/>
+    <variable name="LAYOUT_PATTERN" value="${LAYOUT_PATTERN_PREFIX} - ${LAYOUT_PATTERN_BODY}"/>
+
+    <appender name="MAIN" class="ch.qos.logback.core.FileAppender">
+        <file>logs/urlshortener.log</file>
+        <append>true</append>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>UTF-8</charset>
+            <Pattern>${LAYOUT_PATTERN}</Pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>${LAYOUT_PATTERN}</Pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="INFO">
+        <appender-ref ref="MAIN"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+
+</configuration>
+
