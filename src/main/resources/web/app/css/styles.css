@@ -2,14 +2,14 @@ body {
     color: #000;
     font-family: 'Roboto';
     font-weight: 100 !important;
-    background-color: #220022;
+    background-color: #636666;
 }
 
 .input-form {
     padding: 1.1em;
-    border: 2px solid rgb(173, 172, 173);
+    border: 2px solid rgb(186, 185, 186);
     border-radius: 4px;
-    background-color: rgb(95, 76, 100);
+    background-color: rgb(225, 226, 225);
 }
 
 .vertical-align {

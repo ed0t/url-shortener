@@ -25,7 +25,7 @@
         <timestamp>${maven.build.timestamp}</timestamp>
 
         <docker.repository>https://hub.docker.com/</docker.repository>
-        <docker.image.name>urlshorener</docker.image.name>
+        <docker.image.name>urlshortener</docker.image.name>
         <docker.server.id>docker-hub</docker.server.id>
     </properties>
 

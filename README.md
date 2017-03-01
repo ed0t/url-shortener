@@ -44,10 +44,3 @@ and then run the application
 
  The url validation uses a regular exception that requires "http://" to be part of the url to be shortened.
  If "http://" is missing it will be considered invalid URL.
-
-### Enhancements
-
-For the sake of the exercise both UI and API are part of the same project.
-In order to provide a more scalable solution it would be better to split UI and API in two different projects.
-This would allow to scale the API service or the UI service independently.
-
